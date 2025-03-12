@@ -5,3 +5,6 @@ edition = "2024"
 
 [dependencies]
 git2 = "0.20.0"
+inquire = { version = "0.7.5", features = ["editor"]}
+colored = "3"
+indicatif = "0.17.11"

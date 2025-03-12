@@ -44,7 +44,7 @@ pub fn show_confetti() -> Result<(), Box<dyn Error>> {
 
     for _ in 0..num_pieces {
         let angle: f32 = rng.random_range(0.0..(2.0 * std::f32::consts::PI));
-        let speed: f32 = rng.random_range(1.0..5.0);
+        let speed: f32 = rng.random_range(1.0..10.0);
         let vx = speed * angle.cos();
         let vy = speed * angle.sin();
         let ch = confetti_chars[rng.random_range(0..confetti_chars.len())];
@@ -58,9 +58,9 @@ pub fn show_confetti() -> Result<(), Box<dyn Error>> {
             color,
         })
     }
-    let dt: f32 = 0.1;
-    let gravity: f32 = 0.5;
-    let frames = 100;
+    let dt: f32 = 0.01;
+    let gravity: f32 = 0.1;
+    let frames = 300;
 
     for _ in 0..frames {
         stdout.execute(Clear(ClearType::All))?;

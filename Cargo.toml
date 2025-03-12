@@ -9,3 +9,4 @@ inquire = { version = "0.7.5", features = ["editor"]}
 colored = "3"
 indicatif = "0.17.11"
 crossterm = "0.28.1"
+rand = "0.9.0"

@@ -20,6 +20,9 @@ jobs:
       - name: tag
         id: tag
         uses: biohackerellie/auto-git-tag@v1
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          release_branch: 'main'
       - name: Import GPG key
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v6

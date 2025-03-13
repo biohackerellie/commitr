@@ -49,7 +49,7 @@ pub fn run_git_workflow() -> Result<(), Box<dyn Error>> {
         .with_render_config(description_render_config())
         .prompt()?;
 
-    if !Confirm::new("Commit changes?").prompt()? {
+    if !Confirm::new("Commit changes?(y/n)").prompt()? {
         println!("{}", "Operation cancelled.".red());
         return Ok(());
     }

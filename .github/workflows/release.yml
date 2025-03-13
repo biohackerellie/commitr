@@ -44,5 +44,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
-          GORELEASER_CURRENT_TAG: ${{ env.tag }}
+          GORELEASER_CURRENT_TAG: ${{ steps.tag.outputs.NEXT_TAG }}
           TAPSTOKEN: ${{secrets.TAPSTOKEN}}

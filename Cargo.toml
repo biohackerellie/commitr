@@ -1,7 +1,8 @@
 [package]
 name = "commitr"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
+authors = ["Ellie Kerns <ellie@epklabs.com>"]
 
 [dependencies]
 git2 = "0.20.0"
@@ -11,3 +12,4 @@ indicatif = "0.17.11"
 crossterm = "0.28.1"
 rand = "0.9.0"
 tui-rain = "1.0.1"
+openssl = { version = "0.10", features = ["vendored"] }

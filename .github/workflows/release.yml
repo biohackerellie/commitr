@@ -28,6 +28,9 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
       - uses: actions-rust-lang/setup-rust-toolchain@v1
 
+      - uses: korandoru/setup-zig@v1
+        with:
+          zig-version: master
       - uses: anchore/sbom-action/download-syft@v0.18.0
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v6
@@ -39,4 +42,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
           GORELEASER_CURRENT_TAG: ${{ env.tag }}
-    
+          TAPSTOKEN: ${{secrets.TAPSTOKEN}}

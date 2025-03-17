@@ -2,11 +2,11 @@ pub mod git_ops;
 pub mod ui;
 
 pub fn run() -> Result<(), Box<dyn std::error::Error>> {
-    ui::splash::show_splash_screen()?;
+  ui::splash::show_splash_screen()?;
 
-    git_ops::run_git_workflow()?;
+  git_ops::run_git_workflow()?;
 
-    ui::confetti::show_confetti()?;
+  ui::confetti::show_confetti()?;
 
-    Ok(())
+  Ok(())
 }

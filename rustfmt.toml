@@ -1,0 +1,10 @@
+max_width = 100
+comment_width = 100
+wrap_comments = true
+
+tab_spaces = 2
+hard_tabs = false
+
+format_strings = true
+
+group_imports = "StdExternalCrate"
